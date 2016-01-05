@@ -16,6 +16,5 @@ module Requests
       http_basic = basic_auth ? http_authentication : nil
       { "HTTP_AUTHORIZATION" => http_basic, "Accept" => "version=#{version}" }
     end
-
   end
 end
