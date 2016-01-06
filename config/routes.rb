@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'home#index'
+
   scope module: :api, defaults: { format: 'json' }, constraints: { subdomain: 'api-wall-of-books' } do 
     scope module: :v1, constraints: ApiConstraint.new(version: 1, default: :true) do 
       
